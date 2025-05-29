@@ -1179,8 +1179,8 @@ export default function IntroduccionPage({ onNext }) {
                       background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
                       border: "none",
                       color: "white",
-                      fontSize: "1.3rem",
-                      minWidth: "320px",
+                      fontSize: "1.2rem",
+                      minWidth: "280px",
                       transition: "all 0.3s ease",
                     }}
                     onMouseEnter={(e) => {

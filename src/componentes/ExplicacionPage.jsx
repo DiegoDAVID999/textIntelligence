@@ -718,55 +718,56 @@ export default function ExplicacionPage({ onNext, onBack }) {
             </div>
 
             {/* Navegación */}
-            <div className="d-flex justify-content-between align-items-center">
-              <button
-                onClick={onBack}
-                className="btn btn-outline-light btn-lg d-flex align-items-center px-4 py-3 rounded-4 shadow"
-                style={{
-                  backdropFilter: "blur(10px)",
-                  backgroundColor: "rgba(255,255,255,0.2)",
-                  border: "2px solid rgba(255,255,255,0.3)",
-                  color: "white",
-                  transition: "all 0.3s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.target.style.backgroundColor = "rgba(255,255,255,0.3)"
-                  e.target.style.transform = "translateY(-2px)"
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.backgroundColor = "rgba(255,255,255,0.2)"
-                  e.target.style.transform = "translateY(0)"
-                }}
-              >
-                <ArrowLeft size={20} className="me-2" />
-                <span className="fw-semibold">Volver</span>
-              </button>
+            <div className="d-flex flex-wrap justify-content-between align-items-center gap-3">
+  <button
+    onClick={onBack}
+    className="btn btn-outline-light btn-lg d-flex align-items-center px-4 py-3 rounded-4 shadow"
+    style={{
+      backdropFilter: "blur(10px)",
+      backgroundColor: "rgba(255,255,255,0.2)",
+      border: "2px solid rgba(255,255,255,0.3)",
+      color: "white",
+      transition: "all 0.3s ease",
+      flex: "1 1 45%", // permite que se ajusten y crezcan
+    }}
+    onMouseEnter={(e) => {
+      e.target.style.backgroundColor = "rgba(255,255,255,0.3)"
+      e.target.style.transform = "translateY(-2px)"
+    }}
+    onMouseLeave={(e) => {
+      e.target.style.backgroundColor = "rgba(255,255,255,0.2)"
+      e.target.style.transform = "translateY(0)"
+    }}
+  >
+    <ArrowLeft size={20} className="me-2" />
+    <span className="fw-semibold">Volver</span>
+  </button>
 
-              <button
-                onClick={onNext}
-                className="btn btn-lg fw-bold px-5 py-4 rounded-4 shadow-lg position-relative overflow-hidden"
-                style={{
-                  background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-                  border: "none",
-                  color: "white",
-                  fontSize: "1.2rem",
-                  minWidth: "280px",
-                  transition: "all 0.3s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.target.style.transform = "translateY(-3px) scale(1.02)"
-                  e.target.style.boxShadow = "0 20px 40px rgba(102, 126, 234, 0.4)"
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.transform = "translateY(0) scale(1)"
-                  e.target.style.boxShadow = "0 10px 25px rgba(0,0,0,0.15)"
-                }}
-              >
-                <span className="me-3">🧠</span>
-                Comenzar Test
-                <ArrowRight size={24} className="ms-3" />
-              </button>
-            </div>
+  <button
+    onClick={onNext}
+    className="btn btn-lg fw-bold px-4 py-3 rounded-4 shadow-lg position-relative overflow-hidden"
+    style={{
+      background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      border: "none",
+      color: "white",
+      fontSize: "1.1rem",
+      flex: "1 1 45%", // igual que el otro
+      transition: "all 0.3s ease",
+    }}
+    onMouseEnter={(e) => {
+      e.target.style.transform = "translateY(-3px) scale(1.02)"
+      e.target.style.boxShadow = "0 20px 40px rgba(102, 126, 234, 0.4)"
+    }}
+    onMouseLeave={(e) => {
+      e.target.style.transform = "translateY(0) scale(1)"
+      e.target.style.boxShadow = "0 10px 25px rgba(0,0,0,0.15)"
+    }}
+  >
+    <span className="me-2">🧠</span>
+    Comenzar Test
+    <ArrowRight size={20} className="ms-2" />
+  </button>
+</div>
 
             {/* Footer Inspiracional */}
             <div className="text-center mt-5">
