@@ -718,7 +718,7 @@ export default function ExplicacionPage({ onNext, onBack }) {
             </div>
 
             {/* Navegación */}
-            <div className="d-flex flex-wrap justify-content-between align-items-center gap-3">
+            <div className="d-flex flex-wrap justify-content-center justify-content-md-between align-items-center gap-3">
   <button
     onClick={onBack}
     className="btn btn-outline-light btn-lg d-flex align-items-center px-4 py-3 rounded-4 shadow"
@@ -728,15 +728,14 @@ export default function ExplicacionPage({ onNext, onBack }) {
       border: "2px solid rgba(255,255,255,0.3)",
       color: "white",
       transition: "all 0.3s ease",
-      flex: "1 1 45%", // permite que se ajusten y crezcan
     }}
     onMouseEnter={(e) => {
-      e.target.style.backgroundColor = "rgba(255,255,255,0.3)"
-      e.target.style.transform = "translateY(-2px)"
+      e.target.style.backgroundColor = "rgba(255,255,255,0.3)";
+      e.target.style.transform = "translateY(-2px)";
     }}
     onMouseLeave={(e) => {
-      e.target.style.backgroundColor = "rgba(255,255,255,0.2)"
-      e.target.style.transform = "translateY(0)"
+      e.target.style.backgroundColor = "rgba(255,255,255,0.2)";
+      e.target.style.transform = "translateY(0)";
     }}
   >
     <ArrowLeft size={20} className="me-2" />
@@ -745,27 +744,27 @@ export default function ExplicacionPage({ onNext, onBack }) {
 
   <button
     onClick={onNext}
-    className="btn btn-lg fw-bold px-4 py-3 rounded-4 shadow-lg position-relative overflow-hidden"
+    className="btn btn-lg fw-bold px-5 py-4 rounded-4 shadow-lg position-relative overflow-hidden flex-grow-1 flex-md-grow-0"
     style={{
       background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
       border: "none",
       color: "white",
-      fontSize: "1.1rem",
-      flex: "1 1 45%", // igual que el otro
+      fontSize: "1.2rem",
+      minWidth: "280px", // Considera ajustar este valor o eliminarlo para móviles
       transition: "all 0.3s ease",
     }}
     onMouseEnter={(e) => {
-      e.target.style.transform = "translateY(-3px) scale(1.02)"
-      e.target.style.boxShadow = "0 20px 40px rgba(102, 126, 234, 0.4)"
+      e.target.style.transform = "translateY(-3px) scale(1.02)";
+      e.target.style.boxShadow = "0 20px 40px rgba(102, 126, 234, 0.4)";
     }}
     onMouseLeave={(e) => {
-      e.target.style.transform = "translateY(0) scale(1)"
-      e.target.style.boxShadow = "0 10px 25px rgba(0,0,0,0.15)"
+      e.target.style.transform = "translateY(0) scale(1)";
+      e.target.style.boxShadow = "0 10px 25px rgba(0,0,0,0.15)";
     }}
   >
-    <span className="me-2">🧠</span>
+    <span className="me-3">🧠</span>
     Comenzar Test
-    <ArrowRight size={20} className="ms-2" />
+    <ArrowRight size={24} className="ms-3" />
   </button>
 </div>
 
@@ -782,7 +781,7 @@ export default function ExplicacionPage({ onNext, onBack }) {
                 <p className="lead text-muted mb-2 fst-italic">
                   💡 "La verdadera inteligencia está en reconocer y desarrollar nuestros talentos únicos" 💡
                 </p>
-                <small className="text-muted fw-semibold">- Filosofía de las Inteligencias Múltiples</small>
+                <small className="text-muted fw-semibold">- Mentes Maestras</small>
               </div>
             </div>
           </div>
